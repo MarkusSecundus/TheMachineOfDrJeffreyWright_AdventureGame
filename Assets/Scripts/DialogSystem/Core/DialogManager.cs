@@ -59,7 +59,7 @@ namespace MarkusSecundus.TinyDialog
             _dialogues = new Dictionary<string, Dialog>(DialogList.LoadXml(DialoguesToLoad).Select(d => new KeyValuePair<string, Dialog>(d.Id, d)));
             if (_textBoxPrefab)
             {
-                var textBox = Instantiate(_textBoxPrefab);
+                var textBox = Instantiate(_textBoxPrefab, this.transform);
                 textBox.SetActive(false);
                 if ((_textBoxInstance = textBox.GetComponentInChildren<ITextBox>(true)).Equals(null))
                 {
@@ -68,7 +68,7 @@ namespace MarkusSecundus.TinyDialog
             }
             if (_choiceBoxPrefab)
             {
-                var choiceBox = Instantiate(_choiceBoxPrefab);
+                var choiceBox = Instantiate(_choiceBoxPrefab, this.transform);
                 choiceBox.SetActive(false);
                 if ((_choiceBoxInstance = choiceBox.GetComponentInChildren<IChoiceBox>(true)).Equals(null))
                 {
