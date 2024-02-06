@@ -19,6 +19,21 @@ public class Draggable : SelectableBase
     [SerializeField] UnityEvent OnTouched;
     [SerializeField] UnityEvent OnPickedUp;
 
+    internal static bool ShouldUseHandCursor => _draggedObjects.Count > 0;
+    static HashSet<Draggable> _draggedObjects = new();
+
+    protected override void OnMouseEnter_impl()
+    {
+        base.OnMouseEnter_impl();
+        _draggedObjects.Add(this);
+    }
+    protected override void OnMouseExit_impl()
+    {
+        base.OnMouseExit_impl();
+        _draggedObjects.Remove(this);
+
+    }
+
     Rigidbody rb;
     protected override void Start()
     {
@@ -29,9 +44,9 @@ public class Draggable : SelectableBase
 
 
     int lastDraggedFrame = -1;
-    protected override void OnMouseDrag()
+    protected override void OnMouseDrag_impl()
     {
-        base.OnMouseDrag();
+        base.OnMouseDrag_impl();
         lastDraggedFrame = Time.frameCount;
     }
     private void FixedUpdate()

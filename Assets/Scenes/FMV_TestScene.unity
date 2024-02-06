@@ -15774,6 +15774,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6243180531391881518, guid: efc620410b087d44195be25dc09a2e67, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6977296503516476387, guid: efc620410b087d44195be25dc09a2e67, type: 3}
+      propertyPath: alphaLow
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7646387440671477318, guid: efc620410b087d44195be25dc09a2e67, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15806,7 +15818,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration_seconds: 1
-  waitAfterEnd_seconds: 0
   alphaLow: 0
   alphaHigh: 1
   fadeOutOnStart: 0
@@ -27145,7 +27156,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7119411383630899022, guid: fb0d9abbb6afee34ab4833717729de1f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -864
+      value: -863.99994
       objectReference: {fileID: 0}
     - target: {fileID: 7119411383630899022, guid: fb0d9abbb6afee34ab4833717729de1f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -27157,11 +27168,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7119411383630899022, guid: fb0d9abbb6afee34ab4833717729de1f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7119411383630899022, guid: fb0d9abbb6afee34ab4833717729de1f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7119411383630899022, guid: fb0d9abbb6afee34ab4833717729de1f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

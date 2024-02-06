@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 
 public class TestClickBottle : SelectableBase
 {
-    private void OnMouseUpAsButton() => HandleClick();
+    protected override void OnMouseUpAsButton_impl() => HandleClick();
     public void HandleClick()
     {
         Debug.Log($"Clicked the bottle {name}");

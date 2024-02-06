@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 public class SelectableBase : MonoBehaviour
 {
@@ -14,16 +15,24 @@ public class SelectableBase : MonoBehaviour
 
 
     [SerializeField] float outlineWidthMultiplier = 3f;
-    protected virtual void OnMouseEnter() => IncreaseBottleOutline();
-    protected virtual void OnMouseExit() => ReturnBottleOutline();
-    protected virtual void OnDisable() => ReturnBottleOutline();
-    protected virtual void OnMouseUpAsButton() { OnClicked?.Invoke(); }
 
 
+    internal static volatile bool InputEnabled = true;
+
+
+    protected virtual void OnDisable() => OnMouseExit_impl();
+    private void OnMouseEnter() { if (InputEnabled) OnMouseEnter_impl(); }
+    private void OnMouseExit() { OnMouseExit_impl(); }
+    private void OnMouseUpAsButton() { if (InputEnabled) OnMouseUpAsButton_impl(); }
+    private void OnMouseDrag() { if (InputEnabled) OnMouseDrag_impl(); }
+
+    protected virtual void OnMouseEnter_impl() => IncreaseBottleOutline();
+    protected virtual void OnMouseExit_impl() => ReturnBottleOutline();
+    protected virtual void OnMouseUpAsButton_impl() { OnClicked?.Invoke(); }
     public static bool SomethingIsBeingDragged => timestampForFrameWhereSomethingWasBeingDragged + 1 >= Time.frameCount;
 
     private static int timestampForFrameWhereSomethingWasBeingDragged = -1;
-    protected virtual void OnMouseDrag() { timestampForFrameWhereSomethingWasBeingDragged = Time.frameCount; }
+    protected virtual void OnMouseDrag_impl() { timestampForFrameWhereSomethingWasBeingDragged = Time.frameCount; }
 
 
     [SerializeField] SpriteRenderer _outlineSprite;
@@ -36,7 +45,7 @@ public class SelectableBase : MonoBehaviour
         if (mesh)
         {
             _outlineMaterials = mesh.materials.Where(m => m.shader.name == "Shader Graphs/outline_shader").ToArray();
-            if(_outlineMaterials.Length > 0)
+            if (_outlineMaterials.Length > 0)
                 _originalOutlineWidth = _outlineMaterials[0].GetFloat(OutlinePropertyName);
         }
         _outlineSprite = GetComponentsInChildren<SpriteRenderer>(true).FirstOrDefault(r => r.gameObject.CompareTag("ObjectOutline"));
@@ -45,8 +54,8 @@ public class SelectableBase : MonoBehaviour
 
     void IncreaseBottleOutline()
     {
-        if(!_outlineMaterials.IsNullOrEmpty())
-            foreach(var m in _outlineMaterials) m.SetFloat(OutlinePropertyName, _originalOutlineWidth * outlineWidthMultiplier);
+        if (!_outlineMaterials.IsNullOrEmpty())
+            foreach (var m in _outlineMaterials) m.SetFloat(OutlinePropertyName, _originalOutlineWidth * outlineWidthMultiplier);
         if (_outlineSprite)
         {
             _outlineSprite.gameObject.SetActive(true);
@@ -63,4 +72,5 @@ public class SelectableBase : MonoBehaviour
             _outlineSprite.gameObject.SetActive(false);
         }
     }
+
 }

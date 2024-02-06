@@ -1,3 +1,4 @@
+using Assets.Scripts.Dialog;
 using MarkusSecundus.PhysicsSwordfight.Utils.Randomness;
 using MarkusSecundus.TinyDialog;
 using System;
@@ -32,6 +33,8 @@ public class DialogBubble : MonoBehaviour, ITextBox
         StartCoroutine(printoutCoroutine());
         IEnumerator printoutCoroutine()
         {
+            var cameraTag = new object();
+            UICamera.TurnOn(cameraTag);
             yield return null;
             Debug.Log($"Initiating printout '{text}'");
 
@@ -71,6 +74,7 @@ public class DialogBubble : MonoBehaviour, ITextBox
                 Debug.LogError($"{nameof(ITextBox.DisplayMode.FadeOut)} is not implemented!", this);
                 gameObject.SetActive(false);
             }
+            UICamera.TurnOff(cameraTag);
             onClosed?.Invoke();
 
             void Interrupt()

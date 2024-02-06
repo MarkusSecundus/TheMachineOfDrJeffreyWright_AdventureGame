@@ -8,7 +8,6 @@ using UnityEngine.UI;
 public class FadeEffect : MonoBehaviour
 {
     [SerializeField] float duration_seconds = 1f;
-    [SerializeField] float waitAfterEnd_seconds = 0f;
     [SerializeField] float alphaLow = 0f;
     [SerializeField] float alphaHigh = 1f;
     [SerializeField] bool fadeOutOnStart = false;

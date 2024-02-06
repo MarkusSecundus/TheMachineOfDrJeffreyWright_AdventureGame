@@ -13,7 +13,7 @@ public class CursorManager : MonoBehaviour
 
     public static CursorManager Instance { get; private set; }
 
-    public bool IsHand => Draggable.SomethingIsBeingDragged;//|| HandCursor.HandCursorRequesters.Count > 0;
+    public bool IsHand => Draggable.SomethingIsBeingDragged || Draggable.ShouldUseHandCursor;
 
 
     CursorIcon currentCursor => IsHand ? cursorHand : cursorNormal;
