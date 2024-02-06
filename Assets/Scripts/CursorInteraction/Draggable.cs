@@ -19,20 +19,13 @@ public class Draggable : SelectableBase
     [SerializeField] UnityEvent OnTouched;
     [SerializeField] UnityEvent OnPickedUp;
 
-    internal static bool ShouldUseHandCursor => _draggedObjects.Count > 0;
-    static HashSet<Draggable> _draggedObjects = new();
-
-    protected override void OnMouseEnter_impl()
+    internal static bool CursorIsBeingHoveredOverSomething => _lastHoverTimestamp + 1 >= Time.frameCount;
+    static int _lastHoverTimestamp = -2;
+    private void OnMouseOver()
     {
-        base.OnMouseEnter_impl();
-        _draggedObjects.Add(this);
+        _lastHoverTimestamp = Time.frameCount;
     }
-    protected override void OnMouseExit_impl()
-    {
-        base.OnMouseExit_impl();
-        _draggedObjects.Remove(this);
 
-    }
 
     Rigidbody rb;
     protected override void Start()
@@ -86,7 +79,7 @@ public class Draggable : SelectableBase
         rb.AddTorque(angularDirection * DragAngularForce, ForceMode.Acceleration);
     }
 
-    public static bool SomethingIsBeingDragged { get; private set; }
+    public static new bool SomethingIsBeingDragged { get; private set; }
     bool _isBeingDragged = false;
     void BeginDrag()
     {
@@ -103,7 +96,7 @@ public class Draggable : SelectableBase
         rb.useGravity = true;
     }
 
-    private void OnDisable()
+    protected override void OnDisable()
     {
         if (_isBeingDragged) SomethingIsBeingDragged = false;
         _isBeingDragged = false;
