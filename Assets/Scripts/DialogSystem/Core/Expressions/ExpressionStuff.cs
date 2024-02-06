@@ -334,7 +334,7 @@ namespace MarkusSecundus.TinyDialog.Expressions
         public class Singleton<TClass> : MonoBehaviour where TClass : MonoBehaviour
         {
             private static TClass _instance;
-            public static TClass Instance { get => _instance ? _instance : _createInstance(); }
+            public static TClass Instance { get => _instance ? _instance : _instance= _createInstance(); }
             private static TClass _createInstance()
             {
                 var obj = new GameObject(typeof(TClass).Name + "<Singleton>");

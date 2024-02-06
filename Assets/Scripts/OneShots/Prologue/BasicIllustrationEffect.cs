@@ -32,10 +32,8 @@ public class IIllustrationEffect : AtomicDialogCallback
             Display();
         }
     }
-    bool _shouldRun = false;
     public virtual void Display()
     {
-        _shouldRun = true;
         gameObject.SetActive(true);
         var manager = _manager;
         manager.SetActiveEffect(this);
@@ -44,7 +42,6 @@ public class IIllustrationEffect : AtomicDialogCallback
 
     public virtual void Undisplay()
     {
-        _shouldRun = false;
         StopAllCoroutines();
         foreach (var tw in _runningTweens) if (tw.active) tw.Kill();
         _runningTweens.Clear();

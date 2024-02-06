@@ -8,8 +8,6 @@ public class ActionOnStart : MonoBehaviour
 {
     [SerializeField] UnityEvent OnStart;
 
-
-    bool wasEnabled = false;
     private void Start()
     {
         OnStart?.Invoke();

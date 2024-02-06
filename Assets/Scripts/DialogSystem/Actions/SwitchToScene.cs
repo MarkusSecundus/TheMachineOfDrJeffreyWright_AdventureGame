@@ -23,6 +23,5 @@ namespace Assets.Scripts.DialogSystem.Actions
                 impl();
             void impl()=> SceneManager.LoadScene(DestinationScene);
         }
-        public void InvokeNoArg() => Invoke(default);
     }
 }
