@@ -1,0 +1,34 @@
+<DialogList>
+    <Dialog id="Begin">
+        <Text>Huh? What's that?</Text>
+        <Call signal="PlayMachineSound"/>
+        <Text>I must have brought the thing back to life...</Text>
+        <Text>Oh look, it spits out some words... "YES NO NO YES"... what a weird piece of crap this is.</Text>
+        <Text>Is this what you were so obsessed about, Mr Wright? Crazy man indeed...</Text>
+        <Text>
+            But what now with all those people in the Asylum...
+            You surely will be no help since you are dead.
+        </Text>
+        <Text>
+            Uff, I should show my findings to the scientists and doctors at the psych ward.
+            They will have to figure something out.
+        </Text>
+        <Call signal="Panel2"/>
+        <Text>
+            ...........................................................................................................................
+        </Text>
+        <Text>Huh, what was that?</Text>
+        <Text>
+            I thought I heard something...
+            ... or someone...
+            ... a man's voice...
+        </Text>
+        <Text>
+            .........................................
+        </Text>
+        <Text display="stay">
+            "SOON... IT WILL ALL BE OVER SOON."
+        </Text>
+        <Call signal="TransitionToEndScene"/>
+    </Dialog>
+</DialogList>

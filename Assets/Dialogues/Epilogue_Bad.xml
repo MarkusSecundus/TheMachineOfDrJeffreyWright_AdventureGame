@@ -1,0 +1,23 @@
+<DialogList>
+    <Dialog id="Begin">
+        <Call signal="Panel1"/>
+        <Text>
+            I searched his house and read his journal...
+
+            ...it seems that all the craziness is envoked by that machine.
+        </Text>
+        <Text>
+            All those mad people must have asked the machine a question.
+            Perhaps the knowledge of the future did something to their brains?
+            But I will never know for sure until I find Mr. Wright, the mad scientist.
+        </Text>
+        <Text>How many people were there? Could there be a cure to help them? </Text>
+        <Call signal="Panel2"/>
+        <Text>
+            I will not rest, Mr. Wright must be found... 
+            ...and as soon as possible...
+        </Text>
+        <Text display="stay">Perhaps, this lady Eleanor could lead me somewhere...</Text>
+        <Call signal="TransitionToEndScene"/>
+    </Dialog>
+</DialogList>

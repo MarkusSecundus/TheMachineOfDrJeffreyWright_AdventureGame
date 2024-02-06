@@ -1,0 +1,44 @@
+<DialogList>
+	<Dialog id="Prologue">
+		<Call signal="Panel1"/>
+		<Text>
+			Today, it will be a month since the first murder.
+		</Text>
+		<Call signal="Panel2"/>
+		<Text>
+			They found her on the street, not a nice sight to see... a lot of blood.
+			However, an easy case to solve that was, the murderer did not get far away, just a few streets, screaming and rocking like a child with the weapon still in his hand...
+		</Text>
+		<Text>
+			And then, it happened again... 
+			...a body covered in blood, cuts and bruises all over. And the guilty standing over him, mouth open in a silent scream... 
+		</Text>
+		<Text>
+			...and then it happened again...
+		</Text>
+		<Text>
+			...and again and again... 
+		</Text>
+		<Call signal="Panel3"/>
+		<Text>
+			...now, there is a full floor of these crazy people in the Asylum.
+		</Text>
+		<Text>
+			This is no coincidence, something must have happened to them and I need to figure out what... 
+		</Text>
+		<Call signal="Panel4"/>
+		<Text>
+			... Dr. Jeffrey Wrigth, a scientist who became quite popular recently. 
+			Charlatan I say he is. The thing he made... well anyway, all the culprits knew him and now he also mysteriously disappeared.
+		</Text>
+		<Text>
+			Time is running short.
+			More and more people grow violent. I cannot wait for that quack to return... 
+			I hope he would not mind if I checked his house...
+		</Text>	
+		<Text display="stay">
+			After all, an open window is nothing but an invitation...
+		</Text>
+		<Call signal="ToNextScene"/>
+	</Dialog>
+</DialogList>

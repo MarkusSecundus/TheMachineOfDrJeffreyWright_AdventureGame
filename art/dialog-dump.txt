@@ -1,0 +1,246 @@
+------------------------------
+Prologue:
+
+###Begin
+>
+Today is the 9th of October, 1886. 
+My name is Nicholas Thornton and I am a detective here in London.
+>
+I am very tired... my own thoughts do not let me sleep. 
+However... in cases like these, my psychiatrist advised me to put everything on paper.
+It will ease my mind, he says.
+
+Well, let's see...
+>
+Today, it will be a month since the first murder.
+>
+They found her on the street, not a nice sight to see... a lot of blood.
+However, an easy case to solve that was, the murderer did not get far away, just a few streets, screaming and rocking like a child with the weapon still in his hand...
+>
+They found her on the street, not a nice sight to see... a lot of blood.
+However, an easy case to solve that was, the murderer did not get far away, just a few streets, screaming and rocking like a child with the weapon still in his hand...
+>
+...and then it happened again...
+>
+...and again and again... 
+>
+...now, there is a full floor of these crazy people in the Asylum.
+>
+This is no coincidence, something must have happened to them and I need to figure out what... 
+>
+... Dr. Jeffrey Wrigth, a scientist who became quite popular recently. 
+Charlatan I say he is. The thing he made... well anyway, all the culprits knew him and now he also mysteriously disappeared.
+>
+Time is running short.
+More and more people grow violent. I cannot wait for that quack to return... 
+I hope he would not mind if I checked his house...
+>
+After all, an open window is nothing but an invitation...
+
+-------------------------------------------------------
+MainGame:
+
+
+###OnHouseEnter
+>
+The building looks pretty abandoned.
+
+Let's look around.
+
+###FirstPagesOverviewEnter
+>
+[Instructions]
+
+Browse the pages you found here using physical interaction.
+Beware that paper has two sides that can be written on
+>
+[Instructions]
+
+Use [MiddleMouseButton] to navigate and [ScrollWheel] to zoom in and out
+>
+[Instructions]
+
+Press [Tab] to return to the game world.
+While in the game world, press [Tab] to browse the diary pages again.
+
+###GenericOnPickAnyPage
+[if !AnyPageFound]
+	>
+	It seems he used to write a diary. 
+	Well... that simplifies things.
+	>
+	Let's just search for more pages and hope it'll shed some light on this case.
+>[ContinueWithTextForTheSpecificPage()]
+
+###PickPage1
+[call GenericOnPickAnyPage]
+[set AnyPageFound = true]
+>
+This page seems pretty old.
+Let's see...
+
+###PickPage2
+[call GenericOnPickAnyPage]
+[set AnyPageFound = true]
+>
+Oh... this one looks pretty interesting...
+
+###PickPage3
+[call GenericOnPickAnyPage]
+[set AnyPageFound = true]
+>
+Let's hope this one clarifies some things
+
+###PickPage4
+[call GenericOnPickAnyPage]
+[set AnyPageFound = true]
+>
+Let's see... how messed up this situation really is
+
+###PickPage5
+[call GenericOnPickAnyPage]
+[set AnyPageFound = true]
+>
+I'm wondering if I really want to read this
+
+###PickPage6
+>
+This is the final page
+
+###PickTheKey
+>
+Let's see what this key opens
+[set PickedTheKey = true]
+
+###ChestInteraction
+[if ChestIsOpened]
+	>
+	The chest is empty.
+	No more secrets for you to uncover here.
+[elif KeyIsPickedUp]
+	>
+	*You try using the key that you found in the livingroom*
+	>
+	*The chest opens, revealing yet another diary page*
+	[set ChestIsOpened = true]
+[else]
+	>
+	This chest is locked.
+	Maybe the key could be hidden somewhere in this house.
+	
+###StrongboxOpened
+[if !StrongboxIsOpened]
+	>
+	*The strongbox opens, revealing another diary page*
+	[set StrongboxIsOpened = true]
+[else] 
+	[nothing]
+	
+###GlassIsSharp
+>
+Auch... that glass is pretty sharp
+
+###SacrificePerformed
+[if !BloodSacrificeIsPerformed]
+	>
+	*As your blood touches the altar, you feel a strange presence...*
+	>
+	*...You could almost swear to hear someone whispering into your ear*:
+	"GOOD.... LET THE BLOOD FLOW"
+	>
+	.............................................................................................................
+	...*You shake in disgust, hoping that whatever you just 
+	experienced was only a symptom of sleep deprivation.*
+	[set BloodSacrificeIsPerformed = true]
+
+###TowardsTheFinale
+[if BloodSacrificeIsPerformed]
+	>
+	Wait...
+	... what's this?
+	[run ShowUpTheLastPage()]
+	>
+	How could I have missed that!
+	>
+	Some kind of secret room, hidden right here under the floor?
+	
+	Let's take a look.
+	[unlock SecretRoomEntry]
+[else]
+	>
+	...Yet, the fate of Dr. Wright still remains a mystery
+	[transferTo EpilogueBad]
+	
+###TheMachine
+	>
+	You look in disgust at what used to be Dr. Jeffrey Wright.
+	Worms already started their macabre job...
+	... soon, there will not be much left of him
+	>
+	Then you lay your sight on the machine.
+	Still shiny as new...
+	[transferTo EpilogueWorse]
+	
+###TheScientist
+	>
+	You look in disgust at what used to be Dr. Jeffrey Wright.
+	Worms already started their macabre job...
+	... soon, there will not be much left of him
+	>
+	Then you lay your sight on the machine.
+	Still shiny as new...
+	[transferTo EpilogueWorse]
+
+-------------------------------------------------------
+EpilogueBad:
+
+###Begin
+>
+I searched his house and read his journal...
+
+...it seems that all the craziness is envoked by that machine.
+>
+All those mad people must have asked the machine a question.
+Perhaps the knowledge of the future did something to their brains?
+But I will never know for sure until I find Mr. Wright, the mad scientist.
+>
+How many people were there? Could there be a cure to help them? 
+>
+I will not rest, Mr. Wright must be found... 
+...and as soon as possible...
+>
+Perhaps, this lady Eleanor could lead me somewhere...
+
+-------------------------------------------------------
+EpilogueWorse:
+
+###Begin
+>
+Huh? What's that?
+[begin MachineSound()]
+>
+I must have brought the thing back to life...
+>
+Oh look, it spits out some words... "YES NO NO YES"... what a weird piece of crap this is.
+>
+Is this what you were so obsessed about, Mr Wright? Crazy man indeed...
+>
+But what now with all those people in the Asylum...
+You surely will be no help since you are dead.
+>
+Uff, I should show my findings to the scientists and doctors at the psych ward.
+They will have to figure something out.
+>
+...........................................................................................................................
+>
+Huh, what was that?
+>
+I thought I head something...
+... or someone...
+... a man's voice...
+>
+.........................................
+>
+Huh, again...
+>
+"SOON... IT WILL ALL BE OVER SOON."

@@ -1,0 +1,246 @@
+<DialogList>
+	<Dialog id="Init">
+		<Assign variable="AlreadyFoundSomePage" value="(false)"/>
+		<Assign variable="ChestIsOpened" value="(false)"/>
+		<Assign variable="KeyIsPickedUp" value="(false)"/>
+		<Assign variable="StrongboxIsOpened" value="(false)"/>
+		<Assign variable="BloodSacrificeIsPerformed" value="(false)"/>
+		<Assign variable="LastPageWasRevealed" value="(false)"/>
+		
+		<Jump dialog="OnHouseEntry"/>
+	</Dialog>
+    <Dialog id="OnHouseEntry">
+        <Text>
+            The building looks pretty abandoned.
+
+            Let's look around.
+        </Text>
+    </Dialog>
+    <Dialog id="TransitionToLivingroom">
+        <Call signal="ToLivingRoom"/>
+    </Dialog>
+    <Dialog id="TransitionToWorkroom">
+        <Call signal="ToWorkroom"/>
+    </Dialog>
+    <Dialog id="TransitionToAttic">
+        <Call signal="ToAttic"/>
+    </Dialog>
+    <Dialog id="TransitionToCellar">
+        <Call signal="ToCellar"/>
+    </Dialog>
+    <Dialog id="TransitionToPages">
+        <Switch>
+            <Case if="AlreadyFoundSomePage">
+                <Call signal="ToPages"/>
+            </Case>
+        </Switch>
+    </Dialog>
+    <Dialog id="FirstPagesOverviewEnter">
+        <Text>
+            [Instructions]
+
+            Browse the pages you found here using physical interaction.
+            Beware that paper has two sides that can be written on
+        </Text>
+        <Text>
+            [Instructions]
+
+            Use [MiddleMouseButton] to navigate and [ScrollWheel] to zoom in and out
+        </Text>
+        <Text>
+            [Instructions]
+
+            Press [Tab] to return to the game world.
+            While in the game world, press [Tab] to browse the diary pages again.
+        </Text>
+    </Dialog>
+
+
+
+    <Dialog id="PickedPageGeneric">
+		<Label id="Begin"/>
+        <Switch>
+            <Case if="(not AlreadyFoundSomePage)">
+                <Text>
+                    It seems he used to write a diary. 
+                    Well... that simplifies things.
+                </Text>
+                <Assign variable="AlreadyFoundSomePage" value="(true)"/>
+            </Case>
+        </Switch>
+        <Text>${_textToWrite}</Text>
+        <Call signal="FoundPage${_pageNumber}"/>
+    </Dialog>
+    <Dialog id="PickPage1">
+        <Assign variable="_textToWrite">
+            This page seems pretty old.
+            Let's see...
+        </Assign>
+        <Assign variable="_pageNumber" value="1"/>
+        <Jump dialog="PickedPageGeneric" label="Begin"/>
+    </Dialog>
+    <Dialog id="PickPage2">
+        <Assign variable="_textToWrite">
+            Oh... this one looks pretty interesting...
+        </Assign>
+        <Assign variable="_pageNumber" value="2"/>
+        <Jump dialog="PickedPageGeneric"/>
+    </Dialog>
+    <Dialog id="PickPage3">
+        <Assign variable="_textToWrite">
+            Oh... this one looks pretty interesting...
+        </Assign>
+        <Assign variable="_pageNumber" value="3"/>
+        <Jump dialog="PickedPageGeneric" label="Begin"/>
+    </Dialog>
+    <Dialog id="PickPage4">
+        <Assign variable="_textToWrite">
+            Let's see... how messed up this situation really is
+        </Assign>
+        <Assign variable="_pageNumber" value="4"/>
+        <Jump dialog="PickedPageGeneric" label="Begin"/>
+    </Dialog>
+    <Dialog id="PickPage5">
+        <Assign variable="_textToWrite">
+            I'm wondering if I really want to read this
+        </Assign>
+        <Assign variable="_pageNumber" value="5"/>
+        <Jump dialog="PickedPageGeneric" label="Begin"/>
+    </Dialog>
+    <Dialog id="PickPage6">
+        <Text>
+            This is the final page
+        </Text>
+        <Call signal="FoundPage6"/>
+    </Dialog>
+    <Dialog id="PickTheKey">
+		<Assign variable="KeyIsPickedUp" value="(true)"/>
+        <Text>
+            Let's see what this key opens
+        </Text>
+    </Dialog>
+
+
+    <Dialog id="ChestInteraction">
+        <Switch>
+            <Case if="ChestIsOpened">
+                <Text>
+                    The chest is empty.
+                    No more secrets for you to uncover here.
+                </Text>
+            </Case>
+            <Case if="KeyIsPickedUp">
+                <Assign variable="ChestIsOpened" value="(true)"/>
+                <Text>
+                    [You try using the key that you found in the livingroom]
+                </Text>
+                <Text>
+                    [The chest opens, revealing yet another diary page]
+                </Text>
+                <Call signal="RevealPage3"/>
+            </Case>
+            <Default>
+                <Text>
+                    This chest is locked.
+                    Maybe the key could be hidden somewhere in this house.
+                </Text>
+            </Default>
+        </Switch>
+    </Dialog>
+    <Dialog id="StrongboxOpened">
+        <Switch>
+            <Case if="(not StrongboxIsOpened)">
+				<Call signal="RevealPage4"/>
+				<Assign variable="StrongboxIsOpened" value="(true)"/>
+				<Text>
+					[The strongbox opens, revealing another diary page]
+				</Text>
+            </Case>
+        </Switch>
+    </Dialog>
+    <Dialog id="GlassIsSharp">
+        <Text>Auch... that glass is pretty sharp</Text>
+        <Call signal="CutByGlass"/>
+    </Dialog>
+    <Dialog id="SacrificePerformed">
+        <Switch>
+            <Case if="(not BloodSacrificeIsPerformed)">
+                <Assign variable="BloodSacrificeIsPerformed" value="(true)"/>
+                <Text>
+                    [As your blood touches the altar, you feel a strange
+                    presence...]
+                </Text>
+                <Text>
+                    [...You could almost swear to hear someone whispering into your
+                    ear]:
+                    "GOOD.... LET THE BLOOD FLOW"
+                </Text>
+                <Text>
+                    .............................................................................................................
+                    ...[You shake in disgust, hoping that whatever you just 
+                    experienced was only a symptom of sleep deprivation.]
+                </Text>
+            </Case>
+        </Switch>
+    </Dialog>
+
+
+    <Dialog id="TowardsTheFinale">
+        <Switch>
+            <Case if="BloodSacrificeIsPerformed">
+				<Switch>
+
+					<Debug>Start branch where Blood sacrifice was performed</Debug>
+					<Case if="(not LastPageWasRevealed)">
+						<Debug>Revealing the last page</Debug>
+						<Text>
+							Wait...
+							... what's this?
+						</Text>
+						<Assign variable="LastPageWasRevealed" value="(true)"/>
+						<Call signal="ShowUpTheLastPage"/>
+						<Text>How could I have missed that!</Text>
+						<Text>
+							Some kind of secret room, hidden right here under the floor?
+
+							Let's take a look.
+						</Text>
+						<Call signal="UncoverHiddenEntrance"/>
+					</Case>
+				</Switch>
+				<Debug>Branch where Blood sacrifice was performed finished</Debug>
+            </Case>
+            <Default>
+                <Text>
+                    I searched the house thoroughly.
+                    There sure are many disturbing secrets to be uncovered...
+                </Text>
+                <Text>
+                    ...Yet, the fate of Dr. Wright still remains a mystery
+                </Text>
+                <Call signal="ToEpilogueBad"/>
+            </Default>
+        </Switch>
+    </Dialog>
+
+
+    <Dialog id="TheMachine">
+        <Text>
+            You look in disgust at what used to be Dr. Jeffrey Wright.
+            Worms already started their macabre job...
+            ... soon, there will not be much left of him
+        </Text>
+        <Text display="stay">
+            Then you lay your sight on the machine.
+            Still shiny as new...
+        </Text>
+        <Call signal="ToEpilogueWorse"/>
+    </Dialog>
+    <Dialog id="TheScientist">
+        <Jump dialog="TheMachine"/>
+    </Dialog>
+    <Dialog id="TransitionToSecretRoom">
+        <Call signal="ToSecretRoom"/>
+    </Dialog>
+
+</DialogList>

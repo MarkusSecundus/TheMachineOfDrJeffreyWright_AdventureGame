@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 928527e83d2ed684bb9f9a333b97cbfe, type: 3}
+  m_Name: FoundPagesCount
+  m_EditorClassIdentifier: 
+  Guid: 6006636a517cfe44aaaabfc94a1c62fd
+  PersistanceType: 0
+  DefaultValue: 0
+  Comment: 
+  MaxValue: 2147483647
+  MinValue: 0

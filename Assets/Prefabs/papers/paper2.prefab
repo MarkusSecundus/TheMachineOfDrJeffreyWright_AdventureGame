@@ -1,0 +1,149 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7991609550301999479
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 102109390565498899, guid: c0224bfa8c9cd4b49b96b0e7f93faa8f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -17
+      objectReference: {fileID: 0}
+    - target: {fileID: 1288524983719519920, guid: c0224bfa8c9cd4b49b96b0e7f93faa8f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -17
+      objectReference: {fileID: 0}
+    - target: {fileID: 2700647413645137466, guid: c0224bfa8c9cd4b49b96b0e7f93faa8f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2700647413645137466, guid: c0224bfa8c9cd4b49b96b0e7f93faa8f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2700647413645137466, guid: c0224bfa8c9cd4b49b96b0e7f93faa8f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2700647413645137466, guid: c0224bfa8c9cd4b49b96b0e7f93faa8f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2700647413645137466, guid: c0224bfa8c9cd4b49b96b0e7f93faa8f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2700647413645137466, guid: c0224bfa8c9cd4b49b96b0e7f93faa8f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2700647413645137466, guid: c0224bfa8c9cd4b49b96b0e7f93faa8f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2700647413645137466, guid: c0224bfa8c9cd4b49b96b0e7f93faa8f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2700647413645137466, guid: c0224bfa8c9cd4b49b96b0e7f93faa8f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2700647413645137466, guid: c0224bfa8c9cd4b49b96b0e7f93faa8f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3265726002896862137, guid: c0224bfa8c9cd4b49b96b0e7f93faa8f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -75.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3265726002896862137, guid: c0224bfa8c9cd4b49b96b0e7f93faa8f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -173
+      objectReference: {fileID: 0}
+    - target: {fileID: 5239640486604973420, guid: c0224bfa8c9cd4b49b96b0e7f93faa8f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d811424e08b3ffe488d01c7bc319d9ce, type: 3}
+    - target: {fileID: 5560050943539240816, guid: c0224bfa8c9cd4b49b96b0e7f93faa8f, type: 3}
+      propertyPath: m_text
+      value: "10th of November, 1884\r\n\r\nAt last! After all the hard work, it
+        is done. My new machine. \r\nGetting funding was tricky... but after pointing
+        a gun at his head\r\nand threating to poison his family with cyanide made
+        him finally\r\noblige... And here it is.\r\n\nA machine that could predict
+        the future... People would come and ask the machine\r\na question, \"Is it
+        going to rain tommorow?\", and the machine would write its answer\r\non a
+        strip of tape...\r\n\nThe machine can answer only YES and NO questions but
+        it is enough. And it is working."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5560050943539240816, guid: c0224bfa8c9cd4b49b96b0e7f93faa8f, type: 3}
+      propertyPath: m_fontSize
+      value: 15.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5560050943539240816, guid: c0224bfa8c9cd4b49b96b0e7f93faa8f, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 15.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6337331613692106097, guid: c0224bfa8c9cd4b49b96b0e7f93faa8f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d811424e08b3ffe488d01c7bc319d9ce, type: 3}
+    - target: {fileID: 6459622654851736867, guid: c0224bfa8c9cd4b49b96b0e7f93faa8f, type: 3}
+      propertyPath: m_Name
+      value: paper2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7564204405253190486, guid: c0224bfa8c9cd4b49b96b0e7f93faa8f, type: 3}
+      propertyPath: m_text
+      value: '24th of November, 1884
+
+        
+
+        Last week, I showed my
+        invention to "the Comitee of Science for the Future" in London.
+
+        They
+        were not pleased. They called me a charlatan, a no-scientins and an idiot.
+        One
+
+        of them even jokingly asked:"Am I gonna kick a bucket in a
+        week?". To which my machine
+
+        answered "YES". The FAT FUCK started
+        laughing and the others as well. I could not stand it
+
+        anymore,
+        so I packed my things and ran from there ashamed. But after reading todays
+        newsletter,
+
+        it is I who is laughing now... that fat pig died today
+        morning of stroke. I am expecting a letter
+
+        from the Comitee any
+        day now.
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7564204405253190486, guid: c0224bfa8c9cd4b49b96b0e7f93faa8f, type: 3}
+      propertyPath: m_fontSize
+      value: 15.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7564204405253190486, guid: c0224bfa8c9cd4b49b96b0e7f93faa8f, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 15.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7616981161690512874, guid: c0224bfa8c9cd4b49b96b0e7f93faa8f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 067ef7bc64251f04ab2b862ad0e77362, type: 3}
+    - target: {fileID: 9001706213978209321, guid: c0224bfa8c9cd4b49b96b0e7f93faa8f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 60
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c0224bfa8c9cd4b49b96b0e7f93faa8f, type: 3}
