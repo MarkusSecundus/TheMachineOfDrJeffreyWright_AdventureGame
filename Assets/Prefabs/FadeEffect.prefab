@@ -61,7 +61,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 100
+  m_SortingOrder: 32767
   m_TargetDisplay: 0
 --- !u!114 &4020573958384572747
 MonoBehaviour:
@@ -116,7 +116,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration_seconds: 1.5
-  waitAfterEnd_seconds: 0
   alphaLow: 0
   alphaHigh: 1
   fadeOutOnStart: 1
