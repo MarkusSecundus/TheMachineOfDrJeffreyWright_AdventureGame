@@ -2,6 +2,7 @@ using DG.Tweening;
 using MarkusSecundus.PhysicsSwordfight.Utils.Primitives;
 using System.Collections;
 using System.Collections.Generic;
+using System.Transactions;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -28,12 +29,12 @@ public class FadeEffect : MonoBehaviour
             rend.gameObject.SetActive(true);
             rend.color = rend.color.With(a: alphaBegin);
             var tween = last = rend.DOFade(alphaEnd, duration_seconds);
-            if (alphaEnd <= 0f) tween.OnComplete(() => rend.gameObject.SetActive(false));
+            if (alphaEnd <= 0f) tween.onComplete += () => rend.gameObject.SetActive(false);
         }
-        if (last != null) last.OnComplete(() =>
+        if (last != null) last.onComplete += () =>
         {
             onFinished?.Invoke();
-        });
+        };
         else
             onFinished?.Invoke();
     }
