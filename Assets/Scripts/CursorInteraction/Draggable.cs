@@ -91,7 +91,7 @@ public class Draggable : SelectableBase
     }
     void EndDrag()
     {
-        SomethingIsBeingDragged = false;
+        if(_isBeingDragged) SomethingIsBeingDragged = false;
         _isBeingDragged = false;
         rb.useGravity = true;
     }
