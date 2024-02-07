@@ -1,10 +1,14 @@
 
-Short gothic/eldritch horror point-and-click adventure game, created for the [Introduction to Game Design](https://gamedev.cuni.cz/study/courses-history/courses-2023-2024/) course at the Charles University in Prague.
+Tiny gothic/eldritch horror point-and-click adventure game, that combines hand drawn art with fully 3D physics driven environment.   
+   
+Taking place in Victorian England, you explore the house of Dr. Jeffrey Wright and uncover unsettling mystery of the machine he constructed.
+   
+Originally created in a week-long crunch for the [Introduction to Game Design](https://gamedev.cuni.cz/study/courses-history/courses-2023-2024/) course at the Charles University in Prague.
 
 Authors:
- - Programming: Jakub Hroník ([MarkusSecundus](https://github.com/MarkusSecundus))
- - 3D Art, Shaders: Jakub Hroník
  - 2D Art: Sylvie Paprskářová ([SilviePap](https://github.com/SilviePap))
+ - Programming: Jakub Hroník ([MarkusSecundus](https://github.com/MarkusSecundus))
+ - 3D Art, Music, Sound design: Jakub Hroník
  - Writing, Level design: Sylvie Paprskářová
 
 Used third-party assets:
