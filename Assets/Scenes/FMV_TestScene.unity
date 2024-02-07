@@ -4670,7 +4670,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &352265819
 Transform:
   m_ObjectHideFlags: 0
@@ -9786,7 +9786,7 @@ MonoBehaviour:
   minBoundary: {fileID: 1196792584}
   maxBoundary: {fileID: 1885810054}
   zoomRange:
-    Min: 0.25
+    Min: 0.15
     Max: 1.1
   speedX: {x: -1000, y: 0, z: 0}
   speedY: {x: 0, y: 0, z: -1000}
@@ -23519,7 +23519,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 5000
-  field of view: 60
+  field of view: 45.3
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -28030,7 +28030,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6459622654851736867, guid: c0224bfa8c9cd4b49b96b0e7f93faa8f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7199401743288809340, guid: c0224bfa8c9cd4b49b96b0e7f93faa8f, type: 3}
       propertyPath: m_CollisionDetection
