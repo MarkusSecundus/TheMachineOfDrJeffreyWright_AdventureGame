@@ -31,7 +31,7 @@ public class RoomTransitionManager : MonoBehaviour
 
 
     private Transform _transitionIsInProgress = null;
-    public void DoTransition(Transform newRoot)
+    public void DoTransition(Transform newRoot, System.Action onTransitionCallback =null)
     {
         if (_transitionIsInProgress)
         {
@@ -62,6 +62,7 @@ public class RoomTransitionManager : MonoBehaviour
             if (CurrentRoot) CurrentRoot.gameObject.SetActive(false);
             CurrentRoot = newRoot;
             CurrentRoot.gameObject.SetActive(true);
+            onTransitionCallback?.Invoke();
         }
     }
 }
