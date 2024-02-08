@@ -119,6 +119,7 @@ namespace MarkusSecundus.TinyDialog.Expressions
             ("substring", 2) => args => args[0].StringValue.Substring((int)args[1].NumberValue),
             ("substring", 3) => args => args[0].StringValue.Substring((int)args[1].NumberValue, (int)args[2].NumberValue),
             ("get", 1) => args => TryGetVariable(args[0].StringValue, out var ret)?ret:null,
+            ("platform", 0) => args=> Application.platform.ToString(),
             _ => default
         };
 
