@@ -8,7 +8,7 @@ Originally created in a week-long crunch for the [Introduction to Game Design](h
 Check out the [itch.io page](https://markussecundus.itch.io/the-machine-of-dr-jeffrey-wright)
 
 Authors:
- - Sylvie Paprskářová ([SilviePap](https://github.com/SilviePap)) - 2D Art, Writing, Level design
+ - Silvie Paprskářová ([SilviePap](https://github.com/SilviePap)) - 2D Art, Writing, Level design
  - Jakub Hroník ([MarkusSecundus](https://github.com/MarkusSecundus)) - Programming, 3D Art, Music, Sound design
 
 Used third-party assets:
