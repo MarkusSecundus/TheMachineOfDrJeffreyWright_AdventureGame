@@ -1,9 +1,11 @@
 
 Tiny gothic/eldritch horror point-and-click adventure game, that combines hand drawn art with fully 3D physics driven environment.   
    
-Taking place in Victorian England, you explore the house of Dr. Jeffrey Wright and uncover unsettling mystery of the machine he constructed.
-   
-Originally created in a week-long crunch for the [Introduction to Game Design](https://gamedev.cuni.cz/study/courses-history/courses-2023-2024/) course at the Charles University in Prague.
+Taking place in Victorian era England, you explore the house of Dr. Jeffrey Wright and uncover unsettling mystery of the machine he constructed.
+
+Originally created in a week-long crunch for the [Introduction to Game Design](https://gamedev.cuni.cz/study/courses-history/courses-2023-2024/) course at the Charles University in Prague.   
+
+Check out the [itch.io page](https://markussecundus.itch.io/the-machine-of-dr-jeffrey-wright)
 
 Authors:
  - 2D Art: Sylvie Paprskářová ([SilviePap](https://github.com/SilviePap))
