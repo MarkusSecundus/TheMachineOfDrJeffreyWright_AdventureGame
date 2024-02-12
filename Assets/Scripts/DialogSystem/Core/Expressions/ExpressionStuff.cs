@@ -196,7 +196,7 @@ namespace MarkusSecundus.TinyDialog.Expressions
             public string Text { get; init; }
         }
         public static readonly Regex TokenizerRegex = new Regex(@"^\s*
-(?<shouldNotHappen>\u0001)
+(?<shouldNotHappen>[^\u0000-\uffff])
 |(?<LBRA>\()
 |(?<RBRA>\))
 |(?<NUMBER_LITERAL>([0-9]+(\.[0-9]*)?(e[-]?[0-9]+)?))
