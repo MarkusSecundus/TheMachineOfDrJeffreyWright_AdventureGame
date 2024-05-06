@@ -51,7 +51,7 @@ public class DialogBubble : MonoBehaviour, ITextBox
                     yield return new WaitForSeconds(perCharacter_seconds);
                     if (printoutFinished) t = text.Length;
 
-                    _textField.text = text[0..t];
+                    _textField.text = $@"{text[0..t]}<color=#00000000>{text[t..]}</color>";
                     if (_audioSource && typingSounds.Length > 0 && typingSoundsInterval > 0 && t % typingSoundsInterval == 0)
                         _audioSource.PlayOneShot(typingSounds.RandomElement());
                 }
