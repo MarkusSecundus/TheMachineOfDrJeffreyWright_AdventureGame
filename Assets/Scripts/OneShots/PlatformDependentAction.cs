@@ -1,4 +1,4 @@
-using MarkusSecundus.PhysicsSwordfight.Utils.Serialization;
+using MarkusSecundus.Utils.Serialization;
 using System;
 using System.Collections;
 using System.Collections.Generic;

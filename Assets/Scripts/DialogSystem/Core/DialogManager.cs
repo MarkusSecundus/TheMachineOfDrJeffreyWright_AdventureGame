@@ -1,4 +1,4 @@
-﻿using MarkusSecundus.PhysicsSwordfight.Utils.Serialization;
+﻿using MarkusSecundus.Utils.Serialization;
 using MarkusSecundus.TinyDialog.Expressions;
 using System;
 using System.Collections;

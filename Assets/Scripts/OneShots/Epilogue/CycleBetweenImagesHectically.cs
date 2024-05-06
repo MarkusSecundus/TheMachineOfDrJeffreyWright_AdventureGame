@@ -1,4 +1,4 @@
-using MarkusSecundus.PhysicsSwordfight.Utils.Primitives;
+using MarkusSecundus.Utils.Primitives;
 using System.Collections;
 using DG.Tweening;
 using System.Collections.Generic;

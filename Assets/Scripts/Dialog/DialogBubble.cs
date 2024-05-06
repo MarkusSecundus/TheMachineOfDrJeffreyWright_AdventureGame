@@ -1,5 +1,5 @@
 using Assets.Scripts.Dialog;
-using MarkusSecundus.PhysicsSwordfight.Utils.Randomness;
+using MarkusSecundus.Utils.Randomness;
 using MarkusSecundus.TinyDialog;
 using System;
 using System.Collections;

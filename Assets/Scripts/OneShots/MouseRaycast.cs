@@ -1,5 +1,5 @@
-using MarkusSecundus.PhysicsSwordfight.Utils.Graphics;
-using MarkusSecundus.PhysicsSwordfight.Utils.Primitives;
+using MarkusSecundus.Utils.Graphics;
+using MarkusSecundus.Utils.Primitives;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

@@ -1,4 +1,4 @@
-﻿using MarkusSecundus.PhysicsSwordfight.Utils.Extensions;
+﻿using MarkusSecundus.Utils.Extensions;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

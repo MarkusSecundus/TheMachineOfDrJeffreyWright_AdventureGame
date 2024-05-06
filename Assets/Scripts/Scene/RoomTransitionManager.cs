@@ -1,7 +1,7 @@
 ﻿using Assets.Scripts.Dialog;
 using DG.Tweening;
-using MarkusSecundus.PhysicsSwordfight.Utils.Extensions;
-using MarkusSecundus.PhysicsSwordfight.Utils.Primitives;
+using MarkusSecundus.Utils.Extensions;
+using MarkusSecundus.Utils.Primitives;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -53,7 +53,7 @@ public class RoomTransitionManager : MonoBehaviour
         fadeEffect.FadeIn(() =>
         {
             performTransition();
-            this.PerformWithDelay(() => fadeEffect.FadeOut(()=>_transitionIsInProgress=null), fadeBetween_seconds);
+            this.InvokeWithDelay(() => fadeEffect.FadeOut(()=>_transitionIsInProgress=null), fadeBetween_seconds);
         });
 
         void performTransition()

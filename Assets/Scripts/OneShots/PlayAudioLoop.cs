@@ -1,4 +1,4 @@
-using MarkusSecundus.PhysicsSwordfight.Utils.Extensions;
+using MarkusSecundus.Utils.Extensions;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,7 +22,7 @@ public class PlayAudioLoop : MonoBehaviour
         _audio.clip = Begin;
         _audio.loop = false;
         _audio.Play();
-        this.PerformWithDelay(() =>
+        this.InvokeWithDelay(() =>
         {
             _audio.clip = Loop;
             _audio.loop = true;

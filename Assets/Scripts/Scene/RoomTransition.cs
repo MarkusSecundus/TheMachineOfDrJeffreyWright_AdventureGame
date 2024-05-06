@@ -1,4 +1,4 @@
-using MarkusSecundus.PhysicsSwordfight.Utils.Extensions;
+using MarkusSecundus.Utils.Extensions;
 using MarkusSecundus.TinyDialog;
 using MarkusSecundus.TinyDialog.Expressions;
 using UnityEngine;
@@ -19,7 +19,7 @@ public class RoomTransition : AtomicDialogCallback
 
     public override void Invoke(ExpressionValue _)
     {
-        this.PerformWithDelay(() =>
+        this.InvokeWithDelay(() =>
         {
             var transitionTarget = RoomRoot ? RoomRoot : _manager.LastRoot;
             _manager.DoTransition(transitionTarget, ()=>OnTransition?.Invoke());

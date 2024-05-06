@@ -1,4 +1,4 @@
-using MarkusSecundus.PhysicsSwordfight.Utils.Primitives;
+using MarkusSecundus.Utils.Primitives;
 using UnityEngine;
 
 public class DragCamera : MonoBehaviour

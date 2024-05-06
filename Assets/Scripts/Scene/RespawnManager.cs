@@ -1,4 +1,4 @@
-using MarkusSecundus.PhysicsSwordfight.Utils.Extensions;
+using MarkusSecundus.Utils.Extensions;
 using MarkusSecundus.Utils.Datastructs;
 using System.Collections;
 using System.Collections.Generic;

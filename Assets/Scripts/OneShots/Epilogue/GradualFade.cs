@@ -1,4 +1,4 @@
-using MarkusSecundus.PhysicsSwordfight.Utils.Primitives;
+using MarkusSecundus.Utils.Primitives;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

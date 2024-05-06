@@ -1,7 +1,7 @@
 using Assets.Scripts.DialogSystem.Actions;
 using DG.Tweening;
-using MarkusSecundus.PhysicsSwordfight.Utils.Extensions;
-using MarkusSecundus.PhysicsSwordfight.Utils.Primitives;
+using MarkusSecundus.Utils.Extensions;
+using MarkusSecundus.Utils.Primitives;
 using MarkusSecundus.TinyDialog.Expressions;
 using System.Collections;
 using System.Collections.Generic;
