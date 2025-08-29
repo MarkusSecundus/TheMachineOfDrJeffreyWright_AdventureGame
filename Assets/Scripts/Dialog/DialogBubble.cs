@@ -10,7 +10,7 @@ public class DialogBubble : MonoBehaviour, ITextBox
 {
     [SerializeField] float perCharacter_seconds = 0.01f;
     [SerializeField] float endWait_seconds = 0.4f;
-    [SerializeField] float destroyFadeout_seconds = 1f;
+    //[SerializeField] float destroyFadeout_seconds = 1f;
 
     [SerializeField] AudioClip[] typingSounds;
     [SerializeField] int typingSoundsInterval = 5;

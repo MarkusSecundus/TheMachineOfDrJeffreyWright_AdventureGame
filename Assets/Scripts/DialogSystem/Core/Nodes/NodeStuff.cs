@@ -8,6 +8,8 @@ using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
 using MarkusSecundus.TinyDialog.Expressions;
+using MarkusSecundus.Utils.Datastructs;
+using MarkusSecundus.Utils.Extensions;
 
 namespace MarkusSecundus.TinyDialog
 {

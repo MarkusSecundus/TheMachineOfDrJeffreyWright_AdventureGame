@@ -11,7 +11,7 @@ public class Draggable : SelectableBase
 {
 
     [SerializeField] float DragForce = 800f;
-    [SerializeField] float DragHeight = 30f;
+    //[SerializeField] float DragHeight = 30f;
 
     [SerializeField] Vector3 DragAngularVelocity = Vector3.zero;
     [SerializeField] float DragAngularForce = 0f;
@@ -68,7 +68,7 @@ public class Draggable : SelectableBase
     void MoveToPosition(Vector3 point)
     {
         var direction = (point - rb.position).Normalized(out var directionMagnitude);
-        var velocityDirection = direction - rb.velocity.normalized;
+        var velocityDirection = direction - rb.linearVelocity.normalized;
         rb.AddForce(velocityDirection * directionMagnitude * DragForce, ForceMode.Acceleration);
     }
     void MoveToRotation()

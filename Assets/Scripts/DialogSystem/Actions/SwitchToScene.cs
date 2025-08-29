@@ -1,11 +1,7 @@
 ﻿using MarkusSecundus.TinyDialog.Expressions;
 using MarkusSecundus.TinyDialog;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine.SceneManagement;
+using MarkusSecundus.Utils.Behaviors.Cosmetics;
 
 namespace Assets.Scripts.DialogSystem.Actions
 {

@@ -299,50 +299,7 @@ namespace MarkusSecundus.TinyDialog.Expressions
 
     internal static class DialogueUtilsInternal
     {
-        public static bool IsNil(this object o) => o == null || o.Equals(null);
-        public static bool IsNotNil(this object o) => !o.IsNil();
-
-        public static readonly string DummyString = "<DUMMY>";
-
         public static void DebugLogError(string message, UnityEngine.Object target = null) => Debug.LogError($"TinyDialog: {message}", target);
-
-        public static T Pop<T>(this List<T> stack)
-        {
-            var ret = stack[^1];
-            stack.RemoveAt(stack.Count - 1);
-            return ret;
-        }
-        public static bool TryGetTheOnlyElement<T>(this IEnumerable<T> self, out T ret)
-        {
-            ret = default;
-            using var it = self.GetEnumerator();
-            if (!it.MoveNext())
-                return false;
-            ret = it.Current;
-            if (it.MoveNext())
-                return false;
-            return true;
-        }
-
-        public static (string Left, string Right) SplitByFirstOccurence(this string s, string separator)
-        {
-            var i = s.IndexOf(separator);
-            if (i < 0) return (s, null);
-            return (s.Substring(0, i), s.Substring(i + separator.Length));
-        }
-
-
-        public class Singleton<TClass> : MonoBehaviour where TClass : MonoBehaviour
-        {
-            private static TClass _instance;
-            public static TClass Instance { get => _instance ? _instance : _instance= _createInstance(); }
-            private static TClass _createInstance()
-            {
-                var obj = new GameObject(typeof(TClass).Name + "<Singleton>");
-                GameObject.DontDestroyOnLoad(obj);
-                return obj.AddComponent<TClass>();
-            }
-        }
     }
 
 

@@ -1,7 +1,5 @@
-﻿using Assets.Scripts.Dialog;
-using DG.Tweening;
+﻿using MarkusSecundus.Utils.Behaviors.Cosmetics;
 using MarkusSecundus.Utils.Extensions;
-using MarkusSecundus.Utils.Primitives;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -35,7 +33,7 @@ public class RoomTransitionManager : MonoBehaviour
     {
         if (_transitionIsInProgress)
         {
-            Debug.LogError($"Cannot start transition to {newRoot.name} because transition to {_transitionIsInProgress.name} is already in progress!", this);
+            Debug.LogWarning($"Cannot start transition to {newRoot.name} because transition to {_transitionIsInProgress.name} is already in progress!", this);
             return;
         }
         if (!newRoot) return;
@@ -46,7 +44,7 @@ public class RoomTransitionManager : MonoBehaviour
         }
         if (newRoot == CurrentRoot)
         {
-            Debug.LogError($"Attempting to transition to the same room that already is active ({newRoot.name})", this);
+            Debug.LogWarning($"Attempting to transition to the same room that already is active ({newRoot.name})", this);
             return;
         }
         _transitionIsInProgress = newRoot;

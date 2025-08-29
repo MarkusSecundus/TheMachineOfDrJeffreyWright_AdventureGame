@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
+using MarkusSecundus.Utils.Behaviors.GameObjects;
 
 namespace MarkusSecundus.TinyDialog
 {
@@ -185,19 +186,9 @@ namespace MarkusSecundus.TinyDialog
         }
     }
 
-    public class DialogManagerPersistentState : MonoBehaviour
+    public class DialogManagerPersistentState : Singleton<DialogManagerPersistentState>
     {
-        private void Awake()
-        {
-            
-        }
-        private void OnDestroy()
-        {
 
-        }
-
-
-        public static DialogManagerPersistentState Instance => DialogueUtilsInternal.Singleton<DialogManagerPersistentState>.Instance;
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         private static void InstantiationStartupCallback() { var _ = Instance; }
     }
