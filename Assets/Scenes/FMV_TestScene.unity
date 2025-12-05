@@ -625,7 +625,6 @@ MonoBehaviour:
   outlineWidthMultiplier: 3
   _outlineSprite: {fileID: 0}
   DragForce: 300
-  DragHeight: 30
   DragAngularVelocity: {x: 0, y: 0, z: 0}
   DragAngularForce: 0
   OnTouched:
@@ -1651,7 +1650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56ec0ea179d5cfe42bd3fadcf36b7e59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InputSource: {fileID: 0}
+  _inputSource: {fileID: 0}
   Events:
     values:
     - key: 9
@@ -3484,7 +3483,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56ec0ea179d5cfe42bd3fadcf36b7e59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InputSource: {fileID: 0}
+  _inputSource: {fileID: 0}
   Events:
     values:
     - key: 9
@@ -4803,7 +4802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56ec0ea179d5cfe42bd3fadcf36b7e59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InputSource: {fileID: 0}
+  _inputSource: {fileID: 0}
   Events:
     values:
     - key: 9
@@ -5010,7 +5009,6 @@ MonoBehaviour:
   outlineWidthMultiplier: 3
   _outlineSprite: {fileID: 0}
   DragForce: 200
-  DragHeight: 30
   DragAngularVelocity: {x: 0, y: 0, z: 0}
   DragAngularForce: 0
   OnTouched:
@@ -6029,7 +6027,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &454647007
 Transform:
   m_ObjectHideFlags: 0
@@ -8543,7 +8541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56ec0ea179d5cfe42bd3fadcf36b7e59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InputSource: {fileID: 0}
+  _inputSource: {fileID: 0}
   Events:
     values:
     - key: 9
@@ -9072,7 +9070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56ec0ea179d5cfe42bd3fadcf36b7e59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InputSource: {fileID: 0}
+  _inputSource: {fileID: 0}
   Events:
     values:
     - key: 9
@@ -9623,7 +9621,6 @@ MonoBehaviour:
   outlineWidthMultiplier: 3
   _outlineSprite: {fileID: 0}
   DragForce: 300
-  DragHeight: 30
   DragAngularVelocity: {x: 0, y: 0, z: 0}
   DragAngularForce: 0
   OnTouched:
@@ -15211,7 +15208,6 @@ MonoBehaviour:
   outlineWidthMultiplier: 3
   _outlineSprite: {fileID: 0}
   DragForce: 300
-  DragHeight: 30
   DragAngularVelocity: {x: 0, y: 0, z: 0}
   DragAngularForce: 0
   OnTouched:
@@ -16258,7 +16254,6 @@ MonoBehaviour:
   outlineWidthMultiplier: 3
   _outlineSprite: {fileID: 0}
   DragForce: 100
-  DragHeight: 30
   DragAngularVelocity: {x: 0, y: 0, z: 0}
   DragAngularForce: 0
   OnTouched:
@@ -16694,11 +16689,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5c5ae815f718d24bbca16c50d3a1d7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _comment: 
   duration_seconds: 1
   alphaLow: 0
   alphaHigh: 1
-  fadeOutOnStart: 0
-  onStartupFade:
+  _onStart: 0
+  ease: 0
+  onComplete:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &1177819017
@@ -16757,7 +16754,6 @@ MonoBehaviour:
   outlineWidthMultiplier: 3
   _outlineSprite: {fileID: 0}
   DragForce: 300
-  DragHeight: 30
   DragAngularVelocity: {x: 0, y: 0, z: 0}
   DragAngularForce: 0
   OnTouched:
@@ -17957,7 +17953,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1278491040}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 0515766b4c9c9e646ab33997ed2eace3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -18016,7 +18012,6 @@ MonoBehaviour:
   outlineWidthMultiplier: 3
   _outlineSprite: {fileID: 0}
   DragForce: 100
-  DragHeight: 30
   DragAngularVelocity: {x: 0, y: 0, z: 0}
   DragAngularForce: 0
   OnTouched:
@@ -18613,7 +18608,6 @@ MonoBehaviour:
   outlineWidthMultiplier: 3
   _outlineSprite: {fileID: 0}
   DragForce: 300
-  DragHeight: 30
   DragAngularVelocity: {x: 0, y: 0, z: 0}
   DragAngularForce: 0
   OnTouched:
@@ -18958,7 +18952,6 @@ MonoBehaviour:
   outlineWidthMultiplier: 3
   _outlineSprite: {fileID: 0}
   DragForce: 100
-  DragHeight: 30
   DragAngularVelocity: {x: 0, y: 0, z: 0}
   DragAngularForce: 0
   OnTouched:
@@ -19580,7 +19573,6 @@ MonoBehaviour:
   outlineWidthMultiplier: 3
   _outlineSprite: {fileID: 0}
   DragForce: 300
-  DragHeight: 30
   DragAngularVelocity: {x: 0, y: 0, z: 0}
   DragAngularForce: 0
   OnTouched:
@@ -22968,7 +22960,6 @@ MonoBehaviour:
   outlineWidthMultiplier: 3
   _outlineSprite: {fileID: 0}
   DragForce: 100
-  DragHeight: 30
   DragAngularVelocity: {x: 0, y: 0, z: 0}
   DragAngularForce: 0
   OnTouched:
@@ -26208,7 +26199,6 @@ MonoBehaviour:
   outlineWidthMultiplier: 3
   _outlineSprite: {fileID: 0}
   DragForce: 200
-  DragHeight: 30
   DragAngularVelocity: {x: 0, y: 0, z: 0}
   DragAngularForce: 0
   OnTouched:
@@ -28218,7 +28208,6 @@ MonoBehaviour:
   outlineWidthMultiplier: 3
   _outlineSprite: {fileID: 0}
   DragForce: 800
-  DragHeight: 30
   DragAngularVelocity: {x: 0, y: 0, z: 0}
   DragAngularForce: 0
   OnTouched:
